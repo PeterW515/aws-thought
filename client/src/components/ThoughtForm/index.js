@@ -53,7 +53,7 @@ const ThoughtForm = () => {
         if (!res.ok) throw new Error(res.statusText);
         const postResponse = await res.json();
         setFormState({ ...formState, image: postResponse.Location })
-
+        //need to review exactly how image upload works
         return postResponse.Location;
       } catch (error) {
         console.log(error);
